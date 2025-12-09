@@ -1,0 +1,35 @@
+{
+  "name": "@apiverve/daylightduration",
+  "version": "1.1.12",
+  "description": "Daylight Duration Calculator computes sunrise, sunset times, and total daylight hours for any geographic location and date using astronomical algorithms.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha",
+    "example": "node examples/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/daylightduration-api.git",
+    "directory": "npm"
+  },
+  "keywords": [
+    "daylight calculator", "sunrise sunset", "daylight hours", "solar calculator", "sun position"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/daylightduration-api/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/daylightduration?utm_source=npm",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.13.2"
+  }
+}
