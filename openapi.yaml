@@ -1,47 +1,49 @@
 openapi: 3.0.4
 info:
   title: Daylight Duration Calculator
-  description: Daylight Duration Calculator computes sunrise, sunset times, and total daylight hours for any geographic location and date using astronomical algorithms.
+  description: >-
+    Daylight Duration Calculator computes sunrise, sunset times, and total
+    daylight hours for any geographic location and date using astronomical
+    algorithms.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/daylightduration:
     get:
       summary: Calculate Daylight Duration
-      description: Daylight Duration Calculator computes sunrise, sunset times, and total daylight hours for any geographic location and date using astronomical algorithms.
+      description: Calculate sunrise, sunset, and daylight hours for a location
       operationId: daylightduration
       parameters:
-      - name: latitude
-        in: query
-        schema:
-          type: number
-        required: true
-        description: Latitude of the location (-90 to 90)
-        example: '40.7128'
-      - name: longitude
-        in: query
-        schema:
-          type: number
-        required: true
-        description: Longitude of the location (-180 to 180)
-        example: '-74.0060'
-      - name: date
-        default: today
-        in: query
-        schema:
-          type: string
-        required: false
-        description: Date in YYYY-MM-DD format (defaults to today)
-        example: 2024-06-21
+        - name: latitude
+          in: query
+          schema:
+            type: number
+          required: true
+          description: Latitude of the location
+          example: 40.7128
+        - name: longitude
+          in: query
+          schema:
+            type: number
+          required: true
+          description: Longitude of the location
+          example: -74.006
+        - name: date
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Date in YYYY-MM-DD format (defaults to today)
+          example: '2024-06-21'
       responses:
         '200':
           description: Successful Response
@@ -57,25 +59,25 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
-                  date: 2024-06-21
+                  date: '2024-06-21'
                   location:
                     latitude: 40.7128
                     longitude: -74.006
                   condition: Normal
                   description: Standard sunrise and sunset
-                  sunrise: 09:25:09
-                  sunset: 24:30:44
+                  sunrise: '09:25:09'
+                  sunset: '24:30:44'
                   daylight_duration:
                     total_minutes: 905.58
                     hours: 15
                     minutes: 5
-                    formatted: 15:05:00
+                    formatted: '15:05:00'
                   day_of_year: 173
                   is_valid: true
         '401':
@@ -83,7 +85,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -91,4 +93,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
