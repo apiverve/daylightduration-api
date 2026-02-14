@@ -16,8 +16,8 @@ const api = new daylightdurationAPI({
 // Example query
 var query = {
   latitude: 40.7128,
-  longitude: -74.0060,
-  date: "2024-06-21"
+  longitude: -74.006,
+  date: "today"
 };
 
 // Make the API request using callback
