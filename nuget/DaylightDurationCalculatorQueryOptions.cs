@@ -11,22 +11,19 @@ namespace APIVerve.API.DaylightDurationCalculator
     public class DaylightDurationCalculatorQueryOptions
     {
         /// <summary>
-        /// Latitude of the location (-90 to 90)
-        /// Example: 40.7128
+        /// Latitude of the location
         /// </summary>
         [JsonProperty("latitude")]
         public string Latitude { get; set; }
 
         /// <summary>
-        /// Longitude of the location (-180 to 180)
-        /// Example: -74.0060
+        /// Longitude of the location
         /// </summary>
         [JsonProperty("longitude")]
         public string Longitude { get; set; }
 
         /// <summary>
         /// Date in YYYY-MM-DD format (defaults to today)
-        /// Example: 2024-06-21
         /// </summary>
         [JsonProperty("date")]
         public string Date { get; set; }
