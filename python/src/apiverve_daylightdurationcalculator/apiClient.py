@@ -23,7 +23,11 @@ class ValidationError(DaylightdurationAPIClientError):
 
 class DaylightdurationAPIClient:
     # Validation rules for parameters (generated from schema)
-    VALIDATION_RULES = {"latitude": {"type": "number", "required": True, "min": -90, "max": 90}, "longitude": {"type": "number", "required": True, "min": -180, "max": 180}, "date": {"type": "string", "required": False, "format": "date", "default": "today"}}
+    VALIDATION_RULES = {
+        "latitude": {"type": "number", "required": True, "min": -90, "max": 90},
+        "longitude": {"type": "number", "required": True, "min": -180, "max": 180},
+        "date": {"type": "string", "required": False, "format": "date", "default": "today"}
+    }
 
     # Format validation patterns
     FORMAT_PATTERNS = {
@@ -71,18 +75,10 @@ class DaylightdurationAPIClient:
                 "API key is required. Get your API key at: https://apiverve.com"
             )
 
-        # Check format (alphanumeric, hyphens, and underscores for prefixed keys)
+        # Check format (GUID, prefixed keys like apv_xxx, or alphanumeric)
         if not re.match(r'^[a-zA-Z0-9_-]+$', api_key):
             raise DaylightdurationAPIClientError(
                 "Invalid API key format. API key should only contain letters, numbers, hyphens, and underscores. "
-                "Get your API key at: https://apiverve.com"
-            )
-
-        # Check length (at least 32 characters without hyphens/underscores)
-        trimmed_key = api_key.replace('-', '').replace('_', '')
-        if len(trimmed_key) < 32:
-            raise DaylightdurationAPIClientError(
-                "Invalid API key. API key appears to be too short. "
                 "Get your API key at: https://apiverve.com"
             )
 
