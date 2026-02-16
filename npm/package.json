@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/daylightduration",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Daylight Duration Calculator computes sunrise, sunset times, and total daylight hours for any geographic location and date using astronomical algorithms.",
   "main": "index.js",
   "types": "index.d.ts",
