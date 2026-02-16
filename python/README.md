@@ -44,7 +44,11 @@ from apiverve_daylightdurationcalculator.apiClient import DaylightdurationAPICli
 # Initialize the client with your APIVerve API key
 api = DaylightdurationAPIClient("[YOUR_API_KEY]")
 
-query = { "latitude": 40.7128, "longitude": -74.006, "date": "today" }
+query = {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "date": "today"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "latitude": 40.7128, "longitude": -74.006, "date": "today" }
+query = {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "date": "today"
+}
 ```
 
 ###### Simple Request
@@ -136,7 +144,11 @@ from apiverve_daylightdurationcalculator.apiClient import DaylightdurationAPICli
 
 api = DaylightdurationAPIClient("[YOUR_API_KEY]")
 
-query = { "latitude": 40.7128, "longitude": -74.006, "date": "today" }
+query = {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "date": "today"
+}
 
 try:
     result = api.execute(query)
@@ -157,7 +169,11 @@ from apiverve_daylightdurationcalculator.apiClient import DaylightdurationAPICli
 
 api = DaylightdurationAPIClient("[YOUR_API_KEY]")
 
-query = { "latitude": 40.7128, "longitude": -74.006, "date": "today" }
+query = {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "date": "today"
+}
 
 try:
     result = api.execute(query)
@@ -191,7 +207,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_daylightdurationcalculator.apiClient import DaylightdurationAPIClient, DaylightdurationAPIClientError
 
-query = { "latitude": 40.7128, "longitude": -74.006, "date": "today" }
+query = {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "date": "today"
+}
 
 # Using context manager ensures proper cleanup
 with DaylightdurationAPIClient("[YOUR_API_KEY]") as api:
@@ -217,7 +237,11 @@ from apiverve_daylightdurationcalculator.apiClient import DaylightdurationAPICli
 # Enable debug mode
 api = DaylightdurationAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "latitude": 40.7128, "longitude": -74.006, "date": "today" }
+query = {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "date": "today"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -232,8 +256,13 @@ from apiverve_daylightdurationcalculator.apiClient import DaylightdurationAPICli
 
 api = DaylightdurationAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "date": "today"
+}
+
 try:
-    query = { "latitude": 40.7128, "longitude": -74.006, "date": "today" }
     result = api.execute(query)
     print(result)
 finally:
