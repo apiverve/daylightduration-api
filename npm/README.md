@@ -62,7 +62,7 @@ Using the API is simple. All you have to do is make a request. The API will retu
 var query = {
   latitude: 40.7128,
   longitude: -74.006,
-  date: "today"
+  date: "2024-06-21"
 };
 
 api.execute(query, function (error, data) {
@@ -84,7 +84,7 @@ You can also use promises to make requests. The API returns a promise that you c
 var query = {
   latitude: 40.7128,
   longitude: -74.006,
-  date: "today"
+  date: "2024-06-21"
 };
 
 api.execute(query)
@@ -107,7 +107,7 @@ async function makeRequest() {
     var query = {
   latitude: 40.7128,
   longitude: -74.006,
-  date: "today"
+  date: "2024-06-21"
 };
 
     try {
