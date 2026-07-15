@@ -30,7 +30,7 @@ class daylightdurationWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/daylightduration';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"latitude":{"type":"number","required":true,"min":-90,"max":90},"longitude":{"type":"number","required":true,"min":-180,"max":180},"date":{"type":"string","required":false,"format":"date","default":"today"}};
+        this.validationRules = {"latitude":{"type":"number","required":true,"min":-90,"max":90},"longitude":{"type":"number","required":true,"min":-180,"max":180},"date":{"type":"string","required":false,"format":"date"}};
     }
 
     /**
