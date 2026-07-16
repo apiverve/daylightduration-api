@@ -25,12 +25,15 @@ namespace APIVerve.API.DaylightDurationCalculator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("date")]
-        public DateTimeOffset Date { get; set; }
+        public DateTimeOffset? Date { get; set; }
 
         [JsonProperty("location")]
         public Location Location { get; set; }
@@ -42,7 +45,7 @@ namespace APIVerve.API.DaylightDurationCalculator
         public string Description { get; set; }
 
         [JsonProperty("sunrise")]
-        public DateTimeOffset Sunrise { get; set; }
+        public DateTimeOffset? Sunrise { get; set; }
 
         [JsonProperty("sunset")]
         public string Sunset { get; set; }
@@ -51,33 +54,45 @@ namespace APIVerve.API.DaylightDurationCalculator
         public DaylightDuration DaylightDuration { get; set; }
 
         [JsonProperty("day_of_year")]
-        public long DayOfYear { get; set; }
+        public long? DayOfYear { get; set; }
 
         [JsonProperty("is_valid")]
-        public bool IsValid { get; set; }
+        public bool? IsValid { get; set; }
     }
 
     public partial class DaylightDuration
     {
         [JsonProperty("total_minutes")]
-        public double TotalMinutes { get; set; }
+        public double? TotalMinutes { get; set; }
 
         [JsonProperty("hours")]
-        public long Hours { get; set; }
+        public long? Hours { get; set; }
 
         [JsonProperty("minutes")]
-        public long Minutes { get; set; }
+        public long? Minutes { get; set; }
 
         [JsonProperty("formatted")]
-        public DateTimeOffset Formatted { get; set; }
+        public DateTimeOffset? Formatted { get; set; }
     }
 
     public partial class Location
     {
         [JsonProperty("latitude")]
-        public double Latitude { get; set; }
+        public double? Latitude { get; set; }
 
         [JsonProperty("longitude")]
-        public double Longitude { get; set; }
+        public double? Longitude { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
