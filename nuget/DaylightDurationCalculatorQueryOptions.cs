@@ -14,13 +14,13 @@ namespace APIVerve.API.DaylightDurationCalculator
         /// Latitude of the location
         /// </summary>
         [JsonProperty("latitude")]
-        public string Latitude { get; set; }
+        public double Latitude { get; set; }
 
         /// <summary>
         /// Longitude of the location
         /// </summary>
         [JsonProperty("longitude")]
-        public string Longitude { get; set; }
+        public double Longitude { get; set; }
 
         /// <summary>
         /// Date in YYYY-MM-DD format (defaults to today)
