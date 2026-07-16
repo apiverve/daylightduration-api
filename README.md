@@ -192,11 +192,44 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Daylight Duration Calculator API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "date": "2024-06-21",
+    "location": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    },
+    "condition": "Normal",
+    "description": "Standard sunrise and sunset",
+    "sunrise": "09:25:09",
+    "sunset": "24:30:44",
+    "daylight_duration": {
+      "total_minutes": 905.58,
+      "hours": 15,
+      "minutes": 5,
+      "formatted": "15:05:00"
+    },
+    "day_of_year": 173,
+    "is_valid": true
+  }
 }
 ```
 
