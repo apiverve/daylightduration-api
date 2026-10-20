@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/daylightduration:
     get:
-      summary: Calculate Daylight Duration
+      summary: Daylight Duration Calculator
       description: Calculate sunrise, sunset, and daylight hours for a location
       operationId: daylightduration
       parameters:
