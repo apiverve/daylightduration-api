@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -26,7 +26,7 @@ class DaylightdurationAPIClient:
     VALIDATION_RULES = {
         "latitude": {"type": "number", "required": True, "min": -90, "max": 90},
         "longitude": {"type": "number", "required": True, "min": -180, "max": 180},
-        "date": {"type": "string", "required": False, "format": "date", "default": "today"}
+        "date": {"type": "string", "required": False, "format": "date"}
     }
 
     # Format validation patterns
