@@ -101,11 +101,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/daylightduration?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/daylightduration?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/daylightduration?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/daylightduration?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/daylightduration?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/daylightduration?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
