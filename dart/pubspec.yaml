@@ -1,7 +1,7 @@
 name: apiverve_daylightduration
-description: Daylight Duration Calculator computes sunrise, sunset times, and total daylight hours for any geographic location and date using astronomical algorithms.
-version: 1.1.14
-homepage: https://apiverve.com/marketplace/daylightduration?utm_source=dart&utm_medium=homepage
+description: "Daylight Duration Calculator computes sunrise, sunset times, and total daylight hours for any geographic location and date using astronomical algorithms."
+version: 1.2.3
+homepage: https://apiverve.com/marketplace/daylightduration?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/daylightduration-api/tree/main/dart
 
 environment:

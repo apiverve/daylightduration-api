@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// Daylight Duration Calculator API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/daylightduration?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/daylightduration?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [latitude] (required) - Latitude of the location [min: -90, max: 90]

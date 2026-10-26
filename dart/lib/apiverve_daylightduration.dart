@@ -2,7 +2,7 @@
 ///
 /// Daylight Duration Calculator computes sunrise, sunset times, and total daylight hours for any geographic location and date using astronomical algorithms.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/daylightduration?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/daylightduration?utm_source=dart&utm_medium=referral&utm_content=readme
 library apiverve_daylightduration;
 
 export 'src/client.dart';
